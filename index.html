@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лесной стол — организация гастро-пикников и ужинов на природе в Смоленской области.">
+    <title>Лесной стол | Гастро-пикники в Смоленских лесах</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="images/hero-bg.webp" as="image">
+    <script>
+      console.log('Аналитика загружена (демо).');
+    </script>
+</head>
+<body>
+
+<header>
+    <nav aria-label="Основная навигация">
+        <a href="/les/" class="logo">
+            <img src="images/logo.png" alt="Лесной стол" width="40" height="40">
+            <span>Лесной стол</span>
+        </a>
+        <ul>
+            <li><a href="#formats">Форматы</a></li>
+            <li><a href="#tours">Гастро-туры</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <h1>Гастро-пикники и лесные ужины в Смоленске</h1>
+        <p>Организуем атмосферные выезды на природу с локальной кухней, декором и полным погружением в лесную сказку.</p>
+        <a href="#contacts" class="btn-primary">Забронировать пикник</a>
+    </section>
+
+    <section id="formats" aria-labelledby="formats-heading">
+        <h2 id="formats-heading">Форматы отдыха</h2>
+        <div class="cards-container">
+            <article class="card">
+                <img src="images/dinner.jpg" alt="Романтический ужин при свечах" width="400" height="300">
+                <h3>Романтический пикник</h3>
+                <p>Свечи, пледы, гастро-ужин от шеф-повара и закатное небо над лесом.</p>
+            </article>
+            <article class="card">
+                <img src="images/piknik.jpg" alt="Семейный пикник с детьми" width="400" height="300">
+                <h3>Семейный выезд</h3>
+                <p>Безопасная поляна, аниматор, детское меню и мастер-класс по сбору лесных ягод.</p>
+            </article>
+            <article class="card">
+                <img src="images/teem.jpg" alt="Корпоративный тимбилдинг" width="400" height="300">
+                <h3>Корпоративный тур</h3>
+                <p>Тимбилдинг, кейтеринг на костре и фотозона в окружении смоленских сосен.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="tours" aria-labelledby="tours-heading">
+        <h2 id="tours-heading">Ближайшие гастро-туры</h2>
+        <table>
+            <caption>Расписание на июнь 2026</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Дата</th>
+                    <th scope="col">Название</th>
+                    <th scope="col">Длительность</th>
+                    <th scope="col">Стоимость</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>14 июня</td>
+                    <td>Смоленский лес</td>
+                    <td>4 часа</td>
+                    <td>4 500 руб/чел</td>
+                </tr>
+                <tr>
+                    <td>21 июня</td>
+                    <td>Ягодный рай</td>
+                    <td>5 часов</td>
+                    <td>5 200 руб/чел</td>
+                </tr>
+                <tr>
+                    <td>28 июня</td>
+                    <td>Грибное лукошко</td>
+                    <td>3 часа</td>
+                    <td>3 800 руб/чел</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="tour.html" class="btn-secondary">Подробнее о турах</a></p>
+    </section>
+
+    <section id="reviews" aria-labelledby="reviews-heading">
+        <h2 id="reviews-heading">Отзывы гостей</h2>
+        <div class="reviews-slider">
+            <blockquote>
+                <p>Волшебный вечер! Команда учла все пожелания, еда выше всяких похвал.</p>
+                <cite>Виктория и Михаил, 12.05.2026</cite>
+            </blockquote>
+            <blockquote>
+                <p>Дети в восторге от сбора черники и мастер-класса по приготовлению смора.</p>
+                <cite>Семья Тимофеевых, 03.05.2026</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contacts" aria-labelledby="contacts-heading">
+        <h2 id="contacts-heading">Забронируйте свой лесной стол</h2>
+        <div class="contacts-wrapper">
+            <div class="contact-info">
+                <p><strong>Телефон:</strong> <a href="tel:+79001112233">+7 (900) 111-22-33</a></p>
+                <p><strong>Email:</strong> <a href="mailto:hello@lesnoy-stol.ru">hello@lesnoy-stol.ru</a></p>
+                <p>Работаем в Смоленской области.</p>
+            </div>
+            <form id="contact-form" action="#" method="post" novalidate>
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" required placeholder="Имя">
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+7 900 000-00-00">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="mail@example.com">
+
+                <label for="format">Формат</label>
+                <select id="format" name="format">
+                    <option value="">Выберите формат</option>
+                    <option value="romantic">Романтический</option>
+                    <option value="family">Семейный</option>
+                    <option value="corp">Корпоративный</option>
+                    <option value="tour">Гастро-тур</option>
+                </select>
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="3" placeholder="Ваши пожелания..."></textarea>
+
+                <button type="submit" class="btn-primary">Отправить заявку</button>
+                <p class="form-note">* Форма в демо-режиме</p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>2026 Лесной стол — гастрономические приключения на природе.</p>
+    <p><a href="blog.html">Блог с лесными рецептами</a></p>
+</footer>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Спасибо за заявку! Мы свяжемся с вами. (Демо-режим)');
+        this.reset();
+    });
+</script>
+</body>
+</html>
