@@ -1,4 +1,3 @@
-/* ===== Базовые стили ===== */
 *,
 *::before,
 *::after {
@@ -10,12 +9,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #2E3B2E;
-    background-color: #bef574;
+    background-color: #FBF7F0;
     scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight: 600;
     line-height: 1.3;
     color: #2F5A3A;
@@ -29,11 +28,10 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    aspect-ratio: attr(width) / attr(height); /* fallback, работает в связке с width/height */
 }
 
 a {
-    color: #ff5349;
+    color: #C27A3D;
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -42,7 +40,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== Навигация ===== */
 header {
     background-color: #2F5A3A;
     padding: 1rem 5%;
@@ -51,27 +48,31 @@ header {
     z-index: 10;
     margin: 0;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
+
 .logo {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    font-family: 'Playfair Display', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.8rem;
     color: #FBF7F0;
     text-decoration: none;
 }
+
 .logo img {
     width: 40px;
     height: 40px;
-    object-fit: contain; /* сохраняет пропорции, если логотип не квадратный */
+    object-fit: contain;
     flex-shrink: 0;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -79,18 +80,20 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+
 nav a {
     color: #FBF7F0;
     font-weight: 500;
     padding: 0.5rem 0;
 }
+
 nav a:hover {
     color: #F6D55C;
     text-decoration: none;
 }
 
-/* ===== Hero ===== */
 #hero {
+    margin-top: 0;
     min-height: 70vh;
     background: url('images/hero-bg.webp') no-repeat center center / cover;
     display: flex;
@@ -100,9 +103,10 @@ nav a:hover {
     text-align: center;
     padding: 2rem 5%;
     color: #fff;
-    background-color: #2F5A3A; /* fallback */
+    background-color: #2F5A3A;
     position: relative;
 }
+
 #hero::after {
     content: '';
     position: absolute;
@@ -110,24 +114,26 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.35);
     z-index: 1;
 }
+
 #hero > * {
     position: relative;
     z-index: 2;
 }
+
 #hero h1, #hero p {
     color: #fff;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
+
 #hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin-bottom: 2rem;
 }
 
-/* ===== Кнопки ===== */
 .btn-primary {
     display: inline-block;
-    background-color: #ff5349;
+    background-color: #C27A3D;
     color: #fff;
     padding: 0.9rem 2.2rem;
     border-radius: 40px;
@@ -136,12 +142,14 @@ nav a:hover {
     transition: background-color 0.2s, transform 0.2s;
     text-decoration: none;
 }
+
 .btn-primary:hover {
     background-color: #2F5A3A;
     transform: translateY(-2px);
     text-decoration: none;
     color: #fff;
 }
+
 .btn-secondary {
     display: inline-block;
     background-color: #2F5A3A;
@@ -150,22 +158,22 @@ nav a:hover {
     border-radius: 30px;
     font-weight: 500;
 }
+
 .btn-secondary:hover {
-    background-color: #ff5349;
+    background-color: #C27A3D;
     color: #fff;
     text-decoration: none;
 }
 
-/* ===== Секции ===== */
 section {
     padding: 4rem 5%;
 }
+
 #formats, #tours, #reviews, #contacts {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Карточки форматов */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -173,6 +181,7 @@ section {
     justify-content: center;
     margin-top: 2rem;
 }
+
 .card {
     background: #fff;
     border-radius: 16px;
@@ -182,22 +191,25 @@ section {
     max-width: 380px;
     transition: transform 0.3s;
 }
+
 .card:hover {
     transform: translateY(-5px);
 }
+
 .card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
+
 .card h3, .card p {
     padding: 0 1.2rem;
 }
+
 .card p {
     padding-bottom: 1.5rem;
 }
 
-/* Таблица туров */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -207,23 +219,25 @@ table {
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
 caption {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
     color: #666;
 }
+
 th, td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid #eee;
 }
+
 th {
     background-color: #2F5A3A;
     color: #fff;
     font-weight: 600;
 }
 
-/* Отзывы */
 .reviews-slider {
     display: flex;
     flex-wrap: wrap;
@@ -231,6 +245,7 @@ th {
     justify-content: center;
     margin-top: 2rem;
 }
+
 blockquote {
     background: #fff;
     padding: 2rem;
@@ -240,8 +255,9 @@ blockquote {
     font-style: italic;
     position: relative;
 }
+
 blockquote::before {
-    content: '“';
+    content: '\201C';
     font-size: 4rem;
     color: #C27A3D;
     position: absolute;
@@ -249,6 +265,7 @@ blockquote::before {
     left: 15px;
     font-family: serif;
 }
+
 cite {
     display: block;
     margin-top: 1rem;
@@ -257,16 +274,17 @@ cite {
     color: #2F5A3A;
 }
 
-/* Контакты и форма */
 .contacts-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2rem;
 }
+
 .contact-info {
     flex: 1 1 300px;
 }
+
 form {
     flex: 1 1 400px;
     background: #fff;
@@ -274,11 +292,13 @@ form {
     border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
+
 form label {
     display: block;
     margin-top: 1rem;
     font-weight: 500;
 }
+
 form input, form select, form textarea {
     width: 100%;
     padding: 0.7rem;
@@ -288,14 +308,17 @@ form input, form select, form textarea {
     font-family: inherit;
     font-size: 1rem;
 }
+
 form input:focus, form select:focus, form textarea:focus {
-    outline: 2px solid #ff5349;
+    outline: 2px solid #C27A3D;
     border-color: transparent;
 }
+
 form button {
     margin-top: 1.5rem;
     width: 100%;
 }
+
 .form-note {
     font-size: 0.85rem;
     color: #999;
@@ -303,7 +326,6 @@ form button {
     text-align: center;
 }
 
-/* ===== Подвал ===== */
 footer {
     background: #2F5A3A;
     color: #FBF7F0;
@@ -311,11 +333,11 @@ footer {
     padding: 1.5rem 5%;
     margin-top: 3rem;
 }
+
 footer a {
     color: #F6D55C;
 }
 
-/* ===== Адаптивность ===== */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -325,6 +347,13 @@ footer a {
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.8rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .logo img {
+        width: 32px;
+        height: 32px;
     }
     #hero {
         min-height: 50vh;
